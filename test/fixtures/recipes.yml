@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: Caesar Salad
+  ingredients: Lettuce, croutons, dressing
+  instructions: Combine in a bowl
+
+two:
+  title: BPJ Sandwich
+  ingredients: Peanut butter, jelly, bread
+  instructions: Spread BP and J on bread

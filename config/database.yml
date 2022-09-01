@@ -1,0 +1,16 @@
+pg_config: &pg_config
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *pg_config
+  database: cookbook_dev
+
+test:
+  <<: *pg_config
+  database: cookbook_test
+
+production:
+  <<: *pg_config
+  database: <%= ENV["DATABASE_URL"] %>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @page_title || "Cookbook" %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <header>
+      <h1>Cookbook</h1>
+      <nav>
+        <%= link_to "Home", root_url %>
+        <%= link_to "Recipes", recipes_url %>
+        <%= link_to "About", about_url %>
+        <%= link_to "Contact", contact_url %>
+        <% if rodauth.logged_in? %>
+          <%= link_to "Sign Out", rodauth.logout_path, data: { turbo_method: :post } %>
+        <% else %>
+          <%= link_to "Sign In", rodauth.login_path %>
+        <% end %>
+      </nav>
+    </header>
+    <main>
+      <% if flash.any? %>
+        <% flash.each do |type, message| %>
+          <div id="<%= type %>">
+            <%= message %>
+          </div>
+        <% end %>
+      <% end %>
+      <%= yield %>
+    </main>
+    <footer>
+      <p><a href="https://github.com/siasmj/flyio-cookbook/" target="_blank">Source</a> &bullet; Copyright <%= Date.today.year %> Cookbook</p>
+    </footer>
+  </body>
+</html>
