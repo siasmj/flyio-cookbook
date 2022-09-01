@@ -63,10 +63,10 @@ class RecipesController < ApplicationController
   end
 
   def sort_column
-    %w{ title category_id updated_at }.include?(params[:sort]) ? params[:sort] : "updated_at"
+    %w[title category_id updated_at].include?(params[:sort]) ? params[:sort] : "updated_at"
   end
 
   def sort_direction
-    %w{ asc desc }.include?(params[:direction]) ? params[:direction] : "asc"
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end

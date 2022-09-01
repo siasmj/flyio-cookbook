@@ -45,16 +45,13 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 # Use pagy for pagination [https://github.com/ddnexus/pagy]
 gem "pagy", "~> 5.10"
-
-# Use Faker to generate test data [https://github.com/faker-ruby/faker/]
-gem "faker", "~> 2.22"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
 gem "rodauth-rails", "~> 1.5"
@@ -73,6 +70,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Use Faker to generate test data [https://github.com/faker-ruby/faker/]
+  gem "faker", "~> 2.22"
 
   # Brakeman for vulnerability scans [https://brakemanscanner.org/]
   gem "brakeman", require: false
