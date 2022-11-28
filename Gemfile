@@ -2,10 +2,10 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Ruby version
-ruby "3.1.2"
+ruby "3.1.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.3"
+gem "rails", "~> 7.0.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -77,11 +77,11 @@ group :development do
   # Brakeman for vulnerability scans [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
-  # Use Bullet to find n+1 queries [https://github.com/flyerhzm/bullet]
-  gem "bullet", "~> 7.0.0"
-
   # Patch-level verification for bundler [https://github.com/rubysec/bundler-audit]
   gem "bundler-audit", require: false
+
+  # Validate gem checksum integrity [https://github.com/diffend-io/bundler-integrity]
+  gem "bundler-integrity", require: false
 
   # lol_dba for database index analysis [https://github.com/plentz/lol_dba]
   gem "lol_dba", require: false
