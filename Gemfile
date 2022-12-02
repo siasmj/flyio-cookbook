@@ -74,6 +74,9 @@ group :development do
   # Use Faker to generate test data [https://github.com/faker-ruby/faker/]
   gem "faker", "~> 2.22"
 
+  # Bullet to find n+1 queries
+  gem "bullet", "~> 7.0.0"
+
   # Brakeman for vulnerability scans [https://brakemanscanner.org/]
   gem "brakeman", require: false
 

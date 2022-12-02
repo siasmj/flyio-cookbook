@@ -36,7 +36,11 @@
       <%= yield %>
     </main>
     <footer>
-      <p><a href="https://github.com/siasmj/flyio-cookbook/" target="_blank">Source</a> &bullet; Copyright <%= Date.today.year %> Cookbook</p>
+      <p>
+        <a href="https://github.com/siasmj/flyio-cookbook/" target="_blank">Source</a> &bullet; Copyright <%= Date.today.year %> Cookbook
+        <br>
+        <span id="stackinfo"><%= "Rails #{Rails::VERSION::STRING} / #{RUBY_DESCRIPTION}" %></span>
+      </p>
     </footer>
   </body>
 </html>
