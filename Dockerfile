@@ -81,7 +81,6 @@ RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
 COPY --from=gems /app /app
 COPY --from=node_modules /app/node_modules /app/node_modules
 
-ENV RUBY_YJIT_ENABLE 1
 ENV SECRET_KEY_BASE 1
 
 COPY . .
