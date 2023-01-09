@@ -3,7 +3,7 @@ ARG RUBY_VERSION=3.2.0
 ARG VARIANT=jemalloc-slim
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
-ARG NODE_VERSION=18
+# ARG NODE_VERSION=18
 ARG BUNDLER_VERSION=2.4.3
 
 ARG RAILS_ENV=production
@@ -23,13 +23,13 @@ RUN mkdir -p tmp/pids
 
 SHELL ["/bin/bash", "-c"]
 
-RUN curl https://get.volta.sh | bash
+# RUN curl https://get.volta.sh | bash
 
 ENV BASH_ENV ~/.bashrc
-ENV VOLTA_HOME /root/.volta
-ENV PATH $VOLTA_HOME/bin:/usr/local/bin:$PATH
+# ENV VOLTA_HOME /root/.volta
+# ENV PATH $VOLTA_HOME/bin:/usr/local/bin:$PATH
 
-RUN volta install node@${NODE_VERSION} && volta install yarn
+# RUN volta install node@${NODE_VERSION} && volta install yarn
 
 FROM base as build_deps
 
@@ -53,18 +53,18 @@ RUN gem install -N bundler -v ${BUNDLER_VERSION}
 COPY Gemfile* ./
 RUN bundle install &&  rm -rf vendor/bundle/ruby/*/cache
 
-FROM build_deps as node_modules
+# FROM build_deps as node_modules
 
-COPY package*json ./
-COPY yarn.* ./
+# COPY package*json ./
+# COPY yarn.* ./
 
-RUN if [ -f "yarn.lock" ]; then \
-    yarn install; \
-    elif [ -f "package-lock.json" ]; then \
-    npm install; \
-    else \
-    mkdir node_modules; \
-    fi
+# RUN if [ -f "yarn.lock" ]; then \
+#     yarn install; \
+#     elif [ -f "package-lock.json" ]; then \
+#     npm install; \
+#     else \
+#     mkdir node_modules; \
+#     fi
 
 FROM base
 
@@ -79,9 +79,11 @@ RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
     && rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 COPY --from=gems /app /app
-COPY --from=node_modules /app/node_modules /app/node_modules
+# COPY --from=node_modules /app/node_modules /app/node_modules
 
 ENV SECRET_KEY_BASE 1
+
+ENV RUBY_YJIT_ENABLE 1
 
 COPY . .
 
