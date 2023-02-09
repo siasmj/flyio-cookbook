@@ -1,9 +1,9 @@
 # syntax = docker/dockerfile:experimental
-ARG RUBY_VERSION=3.2.0
+ARG RUBY_VERSION=3.2.1
 ARG VARIANT=jemalloc-slim
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
-ARG BUNDLER_VERSION=2.4.5
+ARG BUNDLER_VERSION=2.4.6
 
 ARG RAILS_ENV=production
 ENV RAILS_ENV=${RAILS_ENV}
