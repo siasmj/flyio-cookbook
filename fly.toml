@@ -7,8 +7,8 @@ processes = []
 
 [build]
   [build.args]
-    BUNDLER_VERSION = "2.4.8"
-    RUBY_VERSION = "3.2.1"
+    BUNDLER_VERSION = "2.4.12"
+    RUBY_VERSION = "3.2.2"
 
 [deploy]
   release_command = "bin/rails fly:release"
