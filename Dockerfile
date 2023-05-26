@@ -3,7 +3,7 @@ ARG RUBY_VERSION=3.2.2
 ARG VARIANT=jemalloc-slim
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
 
-ARG BUNDLER_VERSION=2.4.12
+ARG BUNDLER_VERSION=2.4.13
 
 ARG RAILS_ENV=production
 ENV RAILS_ENV=${RAILS_ENV}

@@ -7,7 +7,7 @@ processes = []
 
 [build]
   [build.args]
-    BUNDLER_VERSION = "2.4.12"
+    BUNDLER_VERSION = "2.4.13"
     RUBY_VERSION = "3.2.2"
 
 [deploy]
