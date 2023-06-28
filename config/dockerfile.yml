@@ -2,10 +2,6 @@
 
 ---
 options:
-  bin-cd: true
-  fullstaq: true
-  jemalloc: true
   label:
     fly_launch_runtime: rails
   postgresql: true
-  yjit: true
