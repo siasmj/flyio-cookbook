@@ -1,79 +1,82 @@
-# syntax = docker/dockerfile:experimental
+# syntax = docker/dockerfile:1
+
+# Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
 ARG RUBY_VERSION=3.2.2
-ARG VARIANT=jemalloc-slim
-FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-${VARIANT} as base
+FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-jemalloc-slim as base
 
-ARG BUNDLER_VERSION=2.4.14
+# Rails app lives here
+WORKDIR /rails
 
-ARG RAILS_ENV=production
-ENV RAILS_ENV=${RAILS_ENV}
+# Set production environment
+ENV RAILS_ENV="production" \
+    BUNDLE_WITHOUT="development:test" \
+    BUNDLE_DEPLOYMENT="1"
 
-ENV RAILS_SERVE_STATIC_FILES true
-ENV RAILS_LOG_TO_STDOUT true
+# Update gems and bundler
+RUN gem update --system --no-document && \
+    gem install -N bundler
 
-ARG BUNDLE_DEPLOYMENT=true
-ARG BUNDLE_WITHOUT=development:test
-ARG BUNDLE_PATH=vendor/bundle
-ARG BUNDLER_JOBS=4
-ENV BUNDLE_DEPLOYMENT ${BUNDLE_DEPLOYMENT}
-ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
-ENV BUNDLE_PATH ${BUNDLE_PATH}
-ENV BUNDLER_JOBS ${BUNDLER_JOBS}
 
-RUN mkdir /app
-WORKDIR /app
-RUN mkdir -p tmp/pids
+# Throw-away build stage to reduce size of final image
+FROM base as build
 
-SHELL ["/bin/bash", "-c"]
-
-ENV BASH_ENV ~/.bashrc
-
-FROM base as build_deps
-
-ARG DEV_PACKAGES="git build-essential libpq-dev wget vim curl gzip xz-utils libsqlite3-dev"
-ENV DEV_PACKAGES ${DEV_PACKAGES}
-
+# Install packages needed to build gems
 RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
     --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
     apt-get update -qq && \
-    apt-get install --no-install-recommends -y ${DEV_PACKAGES} \
-    && rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    apt-get install --no-install-recommends -y build-essential git libpq-dev
 
-FROM build_deps as gems
+# Install application gems
+COPY --link Gemfile Gemfile.lock ./
+RUN --mount=type=cache,id=bld-gem-cache,sharing=locked,target=/srv/vendor \
+    bundle config set app_config .bundle && \
+    bundle config set path /srv/vendor && \
+    bundle install && \
+    bundle exec bootsnap precompile --gemfile && \
+    bundle clean && \
+    mkdir -p vendor && \
+    bundle config set path vendor && \
+    cp -ar /srv/vendor .
 
-RUN echo "gem: --no-document" >> ~/.gemrc
+# Copy application code
+COPY --link . .
 
-RUN gem update -N --system
+# Precompile bootsnap code for faster boot times
+RUN bundle exec bootsnap precompile app/ lib/
 
-RUN gem install -N bundler -v ${BUNDLER_VERSION}
+# Adjust binfiles to set current working directory
+RUN grep -l '#!/usr/bin/env ruby' /rails/bin/* | xargs sed -i '/^#!/aDir.chdir File.expand_path("..", __dir__)'
 
-COPY Gemfile* ./
-RUN bundle install && rm -rf vendor/bundle/ruby/*/cache
+# Precompiling assets for production without requiring secret RAILS_MASTER_KEY
+RUN SECRET_KEY_BASE=DUMMY ./bin/rails assets:precompile
 
+
+# Final stage for app image
 FROM base
 
-ARG PROD_PACKAGES="postgresql-client file vim curl gzip libsqlite3-0"
-ENV PROD_PACKAGES=${PROD_PACKAGES}
-
-RUN --mount=type=cache,id=prod-apt-cache,sharing=locked,target=/var/cache/apt \
-    --mount=type=cache,id=prod-apt-lib,sharing=locked,target=/var/lib/apt \
+# Install packages needed for deployment
+RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
+    --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
     apt-get update -qq && \
-    apt-get install --no-install-recommends -y \
-    ${PROD_PACKAGES} \
-    && rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    apt-get install --no-install-recommends -y curl postgresql-client
 
-COPY --from=gems /app /app
+# Copy built artifacts: gems, application
+COPY --from=build /usr/local/bundle /usr/local/bundle
+COPY --from=build /rails /rails
 
-ENV SECRET_KEY_BASE 1
+# Run and own only the runtime files as a non-root user for security
+RUN useradd rails --create-home --shell /bin/bash && \
+    chown -R rails:rails db log storage tmp
+USER rails:rails
 
-ENV RUBY_YJIT_ENABLE 1
+# Deployment options
+ENV RAILS_LOG_TO_STDOUT="1" \
+    RAILS_SERVE_STATIC_FILES="true" \
+    RUBY_YJIT_ENABLE="1"
 
-COPY . .
+# Entrypoint prepares the database.
+ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
-RUN bin/rails fly:build
-
-ENV PORT 8080
-
-ARG SERVER_COMMAND="bin/rails fly:server"
-ENV SERVER_COMMAND ${SERVER_COMMAND}
-CMD ${SERVER_COMMAND}
+# Start the server by default, this can be overwritten at runtime
+EXPOSE 3000
+CMD ["./bin/rails", "server"]

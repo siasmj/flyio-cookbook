@@ -98,6 +98,9 @@ group :development do
 
   # Standardrb for code analysis and formatting [https://github.com/testdouble/standard]
   gem "standardrb", "~> 1.0"
+
+  # Rails generator for Dockerfiles
+  gem "dockerfile-rails", ">= 1.5"
 end
 
 group :test do
