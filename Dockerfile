@@ -4,6 +4,8 @@
 ARG RUBY_VERSION=3.2.2
 FROM quay.io/evl.ms/fullstaq-ruby:${RUBY_VERSION}-jemalloc-slim as base
 
+LABEL fly_launch_runtime="rails"
+
 # Rails app lives here
 WORKDIR /rails
 
@@ -21,22 +23,14 @@ RUN gem update --system --no-document && \
 FROM base as build
 
 # Install packages needed to build gems
-RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
-    --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
-    apt-get update -qq && \
+RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libpq-dev
 
 # Install application gems
 COPY --link Gemfile Gemfile.lock ./
-RUN --mount=type=cache,id=bld-gem-cache,sharing=locked,target=/srv/vendor \
-    bundle config set app_config .bundle && \
-    bundle config set path /srv/vendor && \
-    bundle install && \
+RUN bundle install && \
     bundle exec bootsnap precompile --gemfile && \
-    bundle clean && \
-    mkdir -p vendor && \
-    bundle config set path vendor && \
-    cp -ar /srv/vendor .
+    rm -rf ~/.bundle/ $BUNDLE_PATH/ruby/*/cache $BUNDLE_PATH/ruby/*/bundler/gems/*/.git
 
 # Copy application code
 COPY --link . .
@@ -55,10 +49,9 @@ RUN SECRET_KEY_BASE=DUMMY ./bin/rails assets:precompile
 FROM base
 
 # Install packages needed for deployment
-RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
-    --mount=type=cache,id=dev-apt-lib,sharing=locked,target=/var/lib/apt \
-    apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl postgresql-client
+RUN apt-get update -qq && \
+    apt-get install --no-install-recommends -y curl postgresql-client && \
+    rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
 COPY --from=build /usr/local/bundle /usr/local/bundle

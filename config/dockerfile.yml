@@ -3,8 +3,9 @@
 ---
 options:
   bin-cd: true
-  cache: true
   fullstaq: true
   jemalloc: true
-  parallel: true
+  label:
+    fly_launch_runtime: rails
+  postgresql: true
   yjit: true
