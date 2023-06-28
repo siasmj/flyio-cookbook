@@ -174,8 +174,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.15.2-x86_64-linux)
       racc (~> 1.4)
-    pagy (5.10.1)
-      activesupport
+    pagy (6.0.4)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
@@ -314,13 +313,13 @@ DEPENDENCIES
   importmap-rails
   lol_dba
   mail (~> 2.7.1)
-  pagy (~> 5.10)
+  pagy (~> 6.0)
   pg (~> 1.4)
   pg_search (~> 2.3)
   puma (~> 5.6)
   rack-mini-profiler
   rails!
-  rodauth-rails (~> 1.5)
+  rodauth-rails (~> 1.9)
   selenium-webdriver
   sprockets-rails
   standardrb (~> 1.0)

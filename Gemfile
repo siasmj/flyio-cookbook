@@ -52,10 +52,10 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use pagy for pagination [https://github.com/ddnexus/pagy]
-gem "pagy", "~> 5.10"
+gem "pagy", "~> 6.0"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
-gem "rodauth-rails", "~> 1.5"
+gem "rodauth-rails", "~> 1.9"
 
 # Include C extensions for concurrent-ruby
 gem "concurrent-ruby-ext"
