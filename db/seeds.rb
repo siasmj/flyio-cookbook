@@ -1,3 +1,5 @@
+require "faker"
+
 # Create categories
 Category.transaction do
   Category.create name: "Appetizers"
@@ -9,12 +11,10 @@ Category.transaction do
 end
 puts "Created categories."
 
-# Create example recipes in dev
-if Rails.env.development?
-  Recipe.transaction do
-    53.times do
-      Recipe.create title: Faker::Food.unique.dish, ingredients: "#{Faker::Food.measurement} #{Faker::Food.ingredient}, #{Faker::Food.measurement} #{Faker::Food.ingredient}, #{Faker::Food.measurement} #{Faker::Food.ingredient}", instructions: Faker::Food.description, category_id: rand(1..Category.count)
-    end
+# Create example recipes
+Recipe.transaction do
+  53.times do
+    Recipe.create title: Faker::Food.unique.dish, ingredients: "#{Faker::Food.measurement} #{Faker::Food.ingredient}, #{Faker::Food.measurement} #{Faker::Food.ingredient}, #{Faker::Food.measurement} #{Faker::Food.ingredient}", instructions: Faker::Food.description, category_id: rand(1..Category.count)
   end
-  puts "Created example recipes."
 end
+puts "Created example recipes."

@@ -30,7 +30,7 @@
           <td><%= recipe.category.name rescue "Uncategorized" %></td>
           <td><%= time_ago_in_words recipe.updated_at %></td>
           <% if rodauth.logged_in? %>
-            <td><%= link_to "Edit", edit_recipe_path(recipe) %></td>
+            <td><%= link_to "Edit", edit_recipe_path(recipe), data: { turbo_frame: "_top" } %></td>
             <td><%= link_to "Delete", recipe, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></td>
           <% end %>
         </tr>
