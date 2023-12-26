@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Ruby version
-ruby "3.2.2"
+ruby "3.3.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
@@ -50,13 +50,16 @@ gem "bootsnap", require: false
 gem "pagy", "~> 6.2"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
-gem "rodauth-rails", "~> 1.12"
+gem "rodauth-rails", "~> 1.13"
 
-# Include C extensions for concurrent-ruby
+# Include C extensions for concurrent-ruby [https://github.com/ruby-concurrency/concurrent-ruby]
 gem "concurrent-ruby-ext"
 
 # Use Faker to generate test data [https://github.com/faker-ruby/faker/]
 gem "faker", "~> 3.2", require: false
+
+# Sentry SDK [https://github.com/getsentry/sentry-ruby]
+gem "sentry-ruby", "~> 5.15"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -73,8 +76,8 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 
-  # Bullet to find n+1 queries
-  gem "bullet", "~> 7.1.0"
+  # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
+  gem "bullet", "~> 7.1.4"
 
   # Brakeman for vulnerability scans [https://brakemanscanner.org/]
   gem "brakeman", require: false
@@ -91,8 +94,8 @@ group :development do
   # Standardrb for code analysis and formatting [https://github.com/testdouble/standard]
   gem "standardrb", "~> 1.0"
 
-  # Rails generator for Dockerfiles
-  gem "dockerfile-rails", "~> 1.5"
+  # Rails generator for Dockerfiles [https://github.com/fly-apps/dockerfile-rails]
+  gem "dockerfile-rails", "~> 1.6"
 end
 
 group :test do
@@ -100,7 +103,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "sentry-ruby", "~> 5.13"
-
-gem "sentry-rails", "~> 5.13"
