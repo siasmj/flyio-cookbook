@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for cookbookdemo on 2024-01-20T19:40:09-06:00
+# fly.toml app configuration file generated for cookbookdemo on 2024-01-20T21:08:20-06:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -37,7 +37,7 @@ console_command = "/rails/bin/rails console"
 [[vm]]
   cpu_kind = "shared"
   cpus = 1
-  memory_mb = 256
+  memory_mb = 512
 
 [[statics]]
   guest_path = "/rails/public"
