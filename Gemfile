@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Ruby version
-ruby "3.3.1"
+ruby "3.4.0-preview1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
