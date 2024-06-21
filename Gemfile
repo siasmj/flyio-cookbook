@@ -62,6 +62,7 @@ gem "faker", "~> 3.2", require: false
 gem "honeybadger", "~> 5.4"
 
 # Temporary fix for deployment error
+gem "net-pop"
 gem "net-protocol"
 
 group :development, :test do
