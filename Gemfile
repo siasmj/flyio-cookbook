@@ -62,8 +62,7 @@ gem "faker", "~> 3.2", require: false
 gem "honeybadger", "~> 5.4"
 
 # Temporary fix for deployment error
-gem "net-pop"
-gem "net-protocol"
+gem "net-pop", github: "ruby/net-pop"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
