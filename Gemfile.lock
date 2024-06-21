@@ -346,6 +346,7 @@ DEPENDENCIES
   honeybadger (~> 5.4)
   importmap-rails
   lol_dba
+  net-protocol
   pagy (~> 6.2)
   pg (~> 1.5)
   pg_search (~> 2.3)

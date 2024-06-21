@@ -61,6 +61,9 @@ gem "faker", "~> 3.2", require: false
 # For error monitoring
 gem "honeybadger", "~> 5.4"
 
+# Temporary fix for deployment error
+gem "net-protocol"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[mri windows]
