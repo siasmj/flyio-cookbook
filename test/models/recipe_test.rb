@@ -10,19 +10,19 @@ class RecipeTest < ActiveSupport::TestCase
 
   test "should not save unless title is filled in" do
     recipe = Recipe.new
-    assert !recipe.save
+    assert_not recipe.save
     assert recipe.errors[:title].include?("can't be blank")
   end
 
   test "should not save unless ingredients is filled in" do
     recipe = Recipe.new
-    assert !recipe.save
+    assert_not recipe.save
     assert recipe.errors[:ingredients].include?("can't be blank")
   end
 
   test "should not save unless instructions is filled in" do
     recipe = Recipe.new
-    assert !recipe.save
+    assert_not recipe.save
     assert recipe.errors[:instructions].include?("can't be blank")
   end
 
@@ -37,7 +37,7 @@ class RecipeTest < ActiveSupport::TestCase
     dupe_title.title = "Cupcakes"
     dupe_title.ingredients = "Flour, butter, eggs"
     dupe_title.instructions = "Mix ingredients..."
-    assert !dupe_title.save
+    assert_not dupe_title.save
     assert dupe_title.errors[:title].include?("has already been taken")
   end
 

@@ -98,7 +98,7 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   # Action Mailer configuration for Rodauth
-  config.action_mailer.default_url_options = {host: "flyio-cookbook.fly.dev", port: 443}
+  config.action_mailer.default_url_options = { host: "flyio-cookbook.fly.dev", port: 443 }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: ENV["SMTP_HOST"],

@@ -26,7 +26,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     login(@account)
     assert_difference("Recipe.count") do
-      post recipes_url, params: {recipe: {ingredients: @recipe.ingredients, instructions: @recipe.instructions, title: @recipe.title}}
+      post recipes_url, params: { recipe: { ingredients: @recipe.ingredients, instructions: @recipe.instructions, title: @recipe.title } }
     end
 
     assert_redirected_to recipe_url(Recipe.last)
@@ -51,7 +51,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
     get "/login"
     assert_response :success
     login(@account)
-    patch recipe_url(@recipe), params: {recipe: {ingredients: @recipe.ingredients, instructions: @recipe.instructions, title: @recipe.title}}
+    patch recipe_url(@recipe), params: { recipe: { ingredients: @recipe.ingredients, instructions: @recipe.instructions, title: @recipe.title } }
     assert_redirected_to recipe_url(@recipe)
   end
 
@@ -70,7 +70,7 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
   def login(account)
     session[:account_id] = account.id
-    session[:authenticated_by] = ["password"]
+    session[:authenticated_by] = [ "password" ]
   end
 
   def logout

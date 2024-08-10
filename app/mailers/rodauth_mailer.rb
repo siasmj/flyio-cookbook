@@ -49,7 +49,7 @@ class RodauthMailer < ApplicationMailer
 
   def email_link(name, action, account_id, key)
     instance = rodauth(name)
-    instance.instance_variable_set(:@account, {id: account_id})
+    instance.instance_variable_set(:@account, { id: account_id })
     instance.instance_variable_set(:"@#{action}_key_value", key)
     instance.public_send(:"#{action}_email_link")
   end

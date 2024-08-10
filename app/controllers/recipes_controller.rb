@@ -51,7 +51,7 @@ class RecipesController < ApplicationController
   private
 
   def get_categories
-    @categories = Category.all.collect { |c| [c.name, c.id] }
+    @categories = Category.all.collect { |c| [ c.name, c.id ] }
   end
 
   def recipe_params
