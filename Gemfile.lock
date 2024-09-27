@@ -126,7 +126,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.7.2)
-    irb (1.14.0)
+    irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.7.2)
@@ -279,7 +279,7 @@ GEM
       websocket (~> 1.0)
     sequel (5.84.0)
       bigdecimal
-    sequel-activerecord_connection (1.4.2)
+    sequel-activerecord_connection (1.4.3)
       activerecord (>= 5.0, < 8)
       after_commit_everywhere (~> 1.1)
       sequel (~> 5.38)
