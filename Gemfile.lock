@@ -224,7 +224,7 @@ GEM
     regexp_parser (2.9.2)
     reline (0.5.10)
       io-console (~> 0.5)
-    rexml (3.3.7)
+    rexml (3.3.8)
     roda (3.84.0)
       rack
     rodauth (2.36.0)
@@ -277,7 +277,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sequel (5.84.0)
+    sequel (5.85.0)
       bigdecimal
     sequel-activerecord_connection (1.4.3)
       activerecord (>= 5.0, < 8)
