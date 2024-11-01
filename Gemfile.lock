@@ -131,7 +131,7 @@ GEM
     irb (1.14.1)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.7.4)
+    json (2.7.5)
     language_server-protocol (3.17.0.3)
     logger (1.6.1)
     lol_dba (2.4.0)
@@ -167,7 +167,7 @@ GEM
       racc (~> 1.4)
     pagy (9.1.1)
     parallel (1.26.3)
-    parser (3.3.5.0)
+    parser (3.3.5.1)
       ast (~> 2.4.1)
       racc
     pg (1.5.9)
@@ -242,7 +242,7 @@ GEM
       rodauth-model (~> 0.2)
       sequel-activerecord_connection (~> 1.1)
       tilt
-    rubocop (1.67.0)
+    rubocop (1.68.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
