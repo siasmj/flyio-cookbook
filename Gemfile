@@ -69,7 +69,7 @@ group :development do
   gem "rack-mini-profiler"
 
   # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  gem "bullet", "~> 7.2.0"
+  gem "bullet", "~> 8.0.0"
 
   # Patch-level verification for bundler [https://github.com/rubysec/bundler-audit]
   gem "bundler-audit", require: false
