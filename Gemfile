@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.0.beta1"
+gem "rails", "~> 8.0.0"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use postgresql as the database for Active Record
@@ -32,12 +32,6 @@ gem "solid_cable"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
-gem "kamal", ">= 2.0.0.rc2", require: false
-
-# Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
-gem "thruster", require: false
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -67,7 +61,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  # gem "bullet", "~> 7.2.0" No Rails 8.0 compatible release yet
+  gem "bullet", "~> 8.0.0"
 
   # Patch-level verification for bundler [https://github.com/rubysec/bundler-audit]
   gem "bundler-audit", require: false
