@@ -6,23 +6,19 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
 
   def index
-    @page_title = "Recipes"
     @recipes = Recipe.includes(:category).all
     @recipes = Recipe.search(params[:q]).includes(:category) if params[:q].present?
     @pagy, @recipes = pagy @recipes.reorder(sort_column => sort_direction)
   end
 
   def show
-    @page_title = @recipe.title
   end
 
   def new
-    @page_title = "New Recipe"
     @recipe = Recipe.new
   end
 
   def edit
-    @page_title = "Edit #{@recipe.title}"
   end
 
   def create

@@ -1,3 +1,7 @@
+<% content_for :title do %>
+  <%= "Edit #{@recipe.title}" %>
+<% end %>
+
 <h2>Editing <%= @recipe.title %></h2>
 
 <%= render "form", recipe: @recipe %>
