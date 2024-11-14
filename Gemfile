@@ -31,19 +31,19 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use pagy for pagination [https://github.com/ddnexus/pagy]
-gem "pagy", "~> 9.0"
+gem "pagy", "~> 9.2"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
-gem "rodauth-rails", "~> 1.13"
+gem "rodauth-rails", "~> 1.15"
 
 # Include C extensions for concurrent-ruby [https://github.com/ruby-concurrency/concurrent-ruby]
 gem "concurrent-ruby-ext"
 
 # Use Faker to generate test data [https://github.com/faker-ruby/faker/]
-gem "faker", "~> 3.2", require: false
+gem "faker", "~> 3.5", require: false
 
 # For error monitoring
-gem "honeybadger", "~> 5.15"
+gem "honeybadger", "~> 5.20"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
