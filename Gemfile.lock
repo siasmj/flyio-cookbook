@@ -342,7 +342,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rack-mini-profiler
   rails (~> 8.0.0)
-  rodauth-rails (~> 1.13)
+  rodauth-rails (~> 1.15)
   rubocop-rails-omakase
   selenium-webdriver
   stimulus-rails
