@@ -31,7 +31,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Use pagy for pagination [https://github.com/ddnexus/pagy]
-gem "pagy", "~> 9.2"
+gem "pagy", "~> 9.3"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
 gem "rodauth-rails", "~> 1.15"
