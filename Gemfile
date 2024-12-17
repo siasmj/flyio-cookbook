@@ -34,7 +34,7 @@ gem "bootsnap", require: false
 gem "pagy", "~> 9.3"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
-gem "rodauth-rails", "~> 1.15"
+gem "rodauth-rails", "~> 2.0"
 
 # Include C extensions for concurrent-ruby [https://github.com/ruby-concurrency/concurrent-ruby]
 gem "concurrent-ruby-ext"

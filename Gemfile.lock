@@ -74,12 +74,8 @@ GEM
       uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
-    after_commit_everywhere (1.5.0)
-      activerecord (>= 4.2)
-      activesupport
     ast (2.4.2)
     base64 (0.2.0)
-    bcrypt (3.1.20)
     benchmark (0.4.0)
     bigdecimal (3.1.8)
     bindex (0.8.1)
@@ -226,10 +222,10 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
-    rdoc (6.9.0)
+    rdoc (6.9.1)
       psych (>= 4.0.0)
     regexp_parser (2.9.3)
-    reline (0.5.12)
+    reline (0.6.0)
       io-console (~> 0.5)
     rexml (3.3.9)
     roda (3.86.0)
@@ -239,14 +235,11 @@ GEM
       sequel (>= 4)
     rodauth-model (0.3.0)
       rodauth (~> 2.28)
-    rodauth-rails (1.15.2)
-      bcrypt
+    rodauth-rails (2.0.0)
       railties (>= 5.0, < 8.1)
       roda (~> 3.76)
       rodauth (~> 2.36)
       rodauth-model (~> 0.2)
-      sequel-activerecord_connection (~> 1.1)
-      tilt
     rubocop (1.69.2)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
@@ -277,7 +270,7 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
-    securerandom (0.4.0)
+    securerandom (0.4.1)
     selenium-webdriver (4.27.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -286,16 +279,11 @@ GEM
       websocket (~> 1.0)
     sequel (5.87.0)
       bigdecimal
-    sequel-activerecord_connection (1.5.1)
-      activerecord (>= 5.0, < 8.1)
-      after_commit_everywhere (~> 1.1)
-      sequel (~> 5.38)
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.2)
     thor (1.3.2)
-    tilt (2.4.0)
-    timeout (0.4.2)
+    timeout (0.4.3)
     turbo-rails (2.0.11)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -345,7 +333,7 @@ DEPENDENCIES
   puma (>= 5.0)
   rack-mini-profiler
   rails (~> 8.0.1)
-  rodauth-rails (~> 1.15)
+  rodauth-rails (~> 2.0)
   rubocop-rails-omakase
   selenium-webdriver
   stimulus-rails
