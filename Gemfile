@@ -59,7 +59,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  gem "bullet", "~> 8.0.6"
+  gem "bullet", "~> 8.0.7"
 
   # Patch-level verification for bundler [https://github.com/rubysec/bundler-audit]
   gem "bundler-audit", require: false
