@@ -117,7 +117,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    honeybadger (5.28.0)
+    honeybadger (5.29.1)
       logger
       ostruct
     i18n (1.14.7)
@@ -344,7 +344,7 @@ DEPENDENCIES
   concurrent-ruby-ext
   debug
   faker (~> 3.5)
-  honeybadger (~> 5.28)
+  honeybadger (~> 5.29)
   importmap-rails
   lol_dba
   pagy (~> 9.3)
