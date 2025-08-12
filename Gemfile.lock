@@ -117,7 +117,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    honeybadger (6.0.4)
+    honeybadger (6.0.5)
       logger
       ostruct
     i18n (1.14.7)
