@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.1.0"
+gem "rails", "~> 8.1.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use postgresql as the database for Active Record
@@ -62,7 +62,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  gem "bullet", "~> 8.1.0.beta1"
+  gem "bullet", "~> 8.1.0"
 
   # Validate gem checksum integrity [https://github.com/diffend-io/bundler-integrity]
   gem "bundler-integrity", require: false
