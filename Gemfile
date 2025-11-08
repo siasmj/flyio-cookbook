@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.3"
+gem "rails", "~> 8.1.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use postgresql as the database for Active Record
@@ -52,6 +52,9 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
+  # Audits gems for known security defects (use config/bundler-audit.yml to ignore issues)
+  gem "bundler-audit", require: false
+
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
 
@@ -59,10 +62,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  gem "bullet", "~> 8.0.8"
-
-  # Patch-level verification for bundler [https://github.com/rubysec/bundler-audit]
-  gem "bundler-audit", require: false
+  gem "bullet", "~> 8.1.0"
 
   # Validate gem checksum integrity [https://github.com/diffend-io/bundler-integrity]
   gem "bundler-integrity", require: false
