@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  include Pagy::Backend
+  include Pagy::Method
 
   before_action :authenticate, except: %i[index show]
   before_action :get_categories, only: %i[new edit create update]

@@ -1,6 +1,4 @@
 module RecipesHelper
-  include Pagy::Frontend
-
   def sort_link_to(name, column, **)
     direction = if params[:sort] == column.to_s
       (params[:direction] == "asc") ? "desc" : "asc"
