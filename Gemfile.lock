@@ -119,7 +119,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    honeybadger (6.1.3)
+    honeybadger (6.2.0)
       logger
       ostruct
     i18n (1.14.7)
@@ -373,7 +373,7 @@ DEPENDENCIES
   concurrent-ruby-ext
   debug
   faker (~> 3.5)
-  honeybadger (~> 6.1)
+  honeybadger (~> 6.2)
   importmap-rails
   lol_dba
   pagy (~> 43.2)
@@ -430,7 +430,7 @@ CHECKSUMS
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   faker (3.5.3) sha256=b961482dc0bb15ccb9a98ea7878b925669e9ae8f5e59b607da540b768137d765
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
-  honeybadger (6.1.3) sha256=35c3af353a90de50b5c15b5eff5d5f63d80816f721511343c1719e71fde42726
+  honeybadger (6.2.0) sha256=fa04e71a655848895ea5cd5809269a64565c8b91c37f621be222b38a25e7ac06
   i18n (1.14.7) sha256=ceba573f8138ff2c0915427f1fc5bdf4aa3ab8ae88c8ce255eb3ecf0a11a5d0f
   importmap-rails (2.2.2) sha256=729f5b1092f832780829ade1d0b46c7e53d91c556f06da7254da2977e93fe614
   io-console (0.8.1) sha256=1e15440a6b2f67b6ea496df7c474ed62c860ad11237f29b3bd187f054b925fcb
