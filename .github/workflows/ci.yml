@@ -22,10 +22,43 @@ jobs:
         run: bin/brakeman --no-pager
       
       - name: Scan for known security vulnerabilities in gems used
-        run: bin/bundler-audit
+        run: bin/bundler-audit check --update
 
       - name: Runs Bundler checksum integrity checks against RubyGems API
         run: bundle exec bundler-integrity
+
+  check_db_indexes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Displays a list of database columns that probably should be indexed
+        run: bundle exec lol_dba db:find_indexes
+
+  scan_html_erb:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Analyze HTML+ERB files in views
+        run: bundle exec herb analyze app/views/ --non-interactive --no-log-file
+
+      - name: Analyze HTML+ERB files in public
+        run: bundle exec herb analyze public/ --non-interactive --no-log-file
 
   scan_js:
     runs-on: ubuntu-latest
@@ -41,21 +74,6 @@ jobs:
 
       - name: Scan for security vulnerabilities in JavaScript dependencies
         run: bin/importmap audit
-
-  lol_dba:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
-
-      - name: Displays a list of database columns that probably should be indexed
-        run: bundle exec lol_dba db:find_indexes
 
   lint:
     runs-on: ubuntu-latest

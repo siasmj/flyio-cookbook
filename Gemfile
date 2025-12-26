@@ -61,14 +61,17 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  gem "bullet", "~> 8.1.0"
-
   # Validate gem checksum integrity [https://github.com/diffend-io/bundler-integrity]
   gem "bundler-integrity", require: false
 
+  # HTML-aware ERB parsing and tooling [https://herb-tools.dev]
+  gem "herb", require: false
+
   # lol_dba for database index analysis [https://github.com/plentz/lol_dba]
   gem "lol_dba", require: false
+
+  # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
+  gem "bullet", "~> 8.1.0"
 end
 
 group :development do
