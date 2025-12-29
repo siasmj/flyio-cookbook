@@ -84,7 +84,7 @@ end
 
 group :test do
   # Pin Minitest for now
-  gem "minitest", "< 6.0"
+  gem "minitest", "< 7.0"
 
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
