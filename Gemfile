@@ -43,7 +43,7 @@ gem "tilt"
 gem "concurrent-ruby-ext"
 
 # Use Faker to generate test data [https://github.com/faker-ruby/faker/]
-gem "faker", "~> 3.5", require: false
+gem "faker", "~> 3.6", require: false
 
 # For error monitoring
 gem "honeybadger", "~> 6.2"
