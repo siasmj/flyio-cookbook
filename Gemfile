@@ -61,9 +61,6 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  # Validate gem checksum integrity [https://github.com/diffend-io/bundler-integrity]
-  gem "bundler-integrity", require: false
-
   # HTML-aware ERB parsing and tooling [https://herb-tools.dev]
   gem "herb", require: false
 
