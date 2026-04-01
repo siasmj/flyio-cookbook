@@ -118,14 +118,14 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.3.0)
       activesupport (>= 6.1)
-    herb (0.9.3-aarch64-linux-gnu)
-    herb (0.9.3-aarch64-linux-musl)
-    herb (0.9.3-arm-linux-gnu)
-    herb (0.9.3-arm-linux-musl)
-    herb (0.9.3-arm64-darwin)
-    herb (0.9.3-x86_64-darwin)
-    herb (0.9.3-x86_64-linux-gnu)
-    herb (0.9.3-x86_64-linux-musl)
+    herb (0.9.4-aarch64-linux-gnu)
+    herb (0.9.4-aarch64-linux-musl)
+    herb (0.9.4-arm-linux-gnu)
+    herb (0.9.4-arm-linux-musl)
+    herb (0.9.4-arm64-darwin)
+    herb (0.9.4-x86_64-darwin)
+    herb (0.9.4-x86_64-linux-gnu)
+    herb (0.9.4-x86_64-linux-musl)
     honeybadger (6.5.3)
       logger
       ostruct
@@ -439,14 +439,14 @@ CHECKSUMS
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
   faker (3.6.1) sha256=c513d23c1d26b426283e913b25e0b714576011d7c1ad368a9ac6ea2113a1ccde
   globalid (1.3.0) sha256=05c639ad6eb4594522a0b07983022f04aa7254626ab69445a0e493aa3786ff11
-  herb (0.9.3-aarch64-linux-gnu) sha256=4a462f10474ac13f8bd168d55d84e96036210dbe2b4e0caa9dcbc09b321ab3ed
-  herb (0.9.3-aarch64-linux-musl) sha256=26d030bd8f4dcde3394cd7f3f648d16d6df54d4cf37e901452f305068a830057
-  herb (0.9.3-arm-linux-gnu) sha256=918724173016f9a5a006aff69664a471d3fea8b9d1dc3d2d1faab21127166ab2
-  herb (0.9.3-arm-linux-musl) sha256=976a405790dde631e7de28bc5be1eea13df8410cff1c87f2fb4333d45b9bc302
-  herb (0.9.3-arm64-darwin) sha256=bed692df6f0535fde32aadee306bceaad0024a95d55eb1fcaa405fae4f7420c8
-  herb (0.9.3-x86_64-darwin) sha256=5218f638f457bf8f0000d3da222b745718668524bf22522850aa333626adda45
-  herb (0.9.3-x86_64-linux-gnu) sha256=947096bd56becd1663562fe3292db5a0f28edb23aa0b121309d0200c9118ed62
-  herb (0.9.3-x86_64-linux-musl) sha256=12320660247475c89b8ce9481bef61a8c17c7f103a114c1926bece4d1f6f49ec
+  herb (0.9.4-aarch64-linux-gnu) sha256=eee408fab9ad68ccfb18d78ba750c117d50c01d8526140d5b1084e4902e3f579
+  herb (0.9.4-aarch64-linux-musl) sha256=c305a5ae08ec909344960ba1ba4e19dc477cad3d7d4864437ee0c6311369fb65
+  herb (0.9.4-arm-linux-gnu) sha256=276f59b878847ce92d3f7c411b95624891278505a6f4413148003634c2d8b7f8
+  herb (0.9.4-arm-linux-musl) sha256=9271a924d2e9938a94c8161d625db308c60fa16b4047344d89e025eaa73310b9
+  herb (0.9.4-arm64-darwin) sha256=f53ebc358bcbacf84935985121f5daa7fd08fce8b7aec42cbed14d67179fc3b5
+  herb (0.9.4-x86_64-darwin) sha256=3be0f70349d61849dbdfaff5c26052198331d699db0ff8bba82a24d84089c538
+  herb (0.9.4-x86_64-linux-gnu) sha256=f0a5f5de4d4d48a8ee9a6e27f74c3104c08926ccf8e1a1bad12eb0efeffe24ee
+  herb (0.9.4-x86_64-linux-musl) sha256=49f8e1d2b1567500e8c544106a034edc701eb5490009737ea008db5f3c71cf3f
   honeybadger (6.5.3) sha256=e64494290d208b49a7747e5c1f77846056d3f9e181b2f97ec7775e50c089219d
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   importmap-rails (2.2.3) sha256=7101be2a4dc97cf1558fb8f573a718404c5f6bcfe94f304bf1f39e444feeb16a
