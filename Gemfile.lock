@@ -126,7 +126,7 @@ GEM
     herb (0.9.5-x86_64-darwin)
     herb (0.9.5-x86_64-linux-gnu)
     herb (0.9.5-x86_64-linux-musl)
-    honeybadger (6.5.4)
+    honeybadger (6.5.5)
       logger
       ostruct
     i18n (1.14.8)
@@ -196,7 +196,7 @@ GEM
       json
       uri
       yaml
-    parallel (1.28.0)
+    parallel (2.0.1)
     parser (3.3.11.1)
       ast (~> 2.4.1)
       racc
@@ -287,11 +287,11 @@ GEM
       roda (~> 3.76)
       rodauth (~> 2.36)
       rodauth-model (~> 0.2)
-    rubocop (1.86.0)
+    rubocop (1.86.1)
       json (~> 2.3)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.1.0)
-      parallel (~> 1.10)
+      parallel (>= 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 2.9.3, < 3.0)
@@ -447,7 +447,7 @@ CHECKSUMS
   herb (0.9.5-x86_64-darwin) sha256=d5771b2b0d4737db82d9f700f59de42623b56c22c20b080658b8ce20c9896a2d
   herb (0.9.5-x86_64-linux-gnu) sha256=5acd1a63bf456f27d66b5833649e493ab0f1527fb8ae44325cf76639d7b592db
   herb (0.9.5-x86_64-linux-musl) sha256=799e53792abfd89cdcdd018d661066a28506de25d0de9f05353a65a77af9dc2a
-  honeybadger (6.5.4) sha256=f7ab939a6de18758d8ccf5e971ce7a9a27543b8f846227f3d0b0340fe65633eb
+  honeybadger (6.5.5) sha256=bb42c7da748f72961520056ef49ab63abd886d62fd3e7bc45f095c15f7094ca7
   i18n (1.14.8) sha256=285778639134865c5e0f6269e0b818256017e8cde89993fdfcbfb64d088824a5
   importmap-rails (2.2.3) sha256=7101be2a4dc97cf1558fb8f573a718404c5f6bcfe94f304bf1f39e444feeb16a
   io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
@@ -479,7 +479,7 @@ CHECKSUMS
   nokogiri (1.19.2-x86_64-linux-musl) sha256=93128448e61a9383a30baef041bf1f5817e22f297a1d400521e90294445069a8
   ostruct (0.6.3) sha256=95a2ed4a4bd1d190784e666b47b2d3f078e4a9efda2fccf18f84ddc6538ed912
   pagy (43.5.0) sha256=58885d5f659e8db5b92cf35eeba674113e4e7bda12649b603c2d6908402570a4
-  parallel (1.28.0) sha256=33e6de1484baf2524792d178b0913fc8eb94c628d6cfe45599ad4458c638c970
+  parallel (2.0.1) sha256=337782d3e39f4121e67563bf91dd8ece67f48923d90698614773a0ec9a5b2c7d
   parser (3.3.11.1) sha256=d17ace7aabe3e72c3cc94043714be27cc6f852f104d81aa284c2281aecc65d54
   pg (1.6.3) sha256=1388d0563e13d2758c1089e35e973a3249e955c659592d10e5b77c468f628a99
   pg (1.6.3-aarch64-linux) sha256=0698ad563e02383c27510b76bf7d4cd2de19cd1d16a5013f375dd473e4be72ea
@@ -516,7 +516,7 @@ CHECKSUMS
   rodauth (2.43.0) sha256=4dc5f5c6b8013502352beb342f72b64515680af2f95603f7248031fd9203984a
   rodauth-model (0.4.0) sha256=dc28eb1863f0b8facb1afe2ea6b1e1159821c32989eea237d2a41c287f958c1e
   rodauth-rails (2.1.2) sha256=012ffa9f7a2b7d6c768324fb9a99508d198867eb321edd8a3591b066e096f194
-  rubocop (1.86.0) sha256=4ff1186fe16ebe9baff5e7aad66bb0ad4cabf5cdcd419f773146dbba2565d186
+  rubocop (1.86.1) sha256=44415f3f01d01a21e01132248d2fd0867572475b566ca188a0a42133a08d4531
   rubocop-ast (1.49.1) sha256=4412f3ee70f6fe4546cc489548e0f6fcf76cafcfa80fa03af67098ffed755035
   rubocop-performance (1.26.1) sha256=cd19b936ff196df85829d264b522fd4f98b6c89ad271fa52744a8c11b8f71834
   rubocop-rails (2.34.3) sha256=10d37989024865ecda8199f311f3faca990143fbac967de943f88aca11eb9ad2
