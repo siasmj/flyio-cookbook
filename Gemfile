@@ -46,7 +46,7 @@ gem "concurrent-ruby-ext"
 gem "faker", "~> 3.8", require: false
 
 # For error monitoring
-gem "honeybadger", "~> 6.8"
+gem "honeybadger", "~> 6.9"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
