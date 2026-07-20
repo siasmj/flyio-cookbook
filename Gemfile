@@ -34,7 +34,7 @@ gem "bootsnap", ">= 1.24", require: false
 gem "pagy", "~> 43.5"
 
 # Use Rodauth for authenticatiion [https://github.com/janko/rodauth-rails]
-gem "rodauth-rails", "~> 2.1"
+gem "rodauth-rails", "~> 2.2"
 gem "sequel-activerecord_connection"
 gem "bcrypt"
 gem "tilt"
