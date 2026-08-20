@@ -222,7 +222,7 @@ GEM
     puma (8.0.2)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.2.6)
+    rack (3.2.7)
     rack-mini-profiler (4.0.1)
       rack (>= 1.2.0)
     rack-session (2.1.2)
@@ -277,14 +277,14 @@ GEM
     reline (0.7.0)
       io-console (~> 0.5)
     rexml (3.4.4)
-    roda (3.106.0)
+    roda (3.107.0)
       rack
-    rodauth (2.45.0)
+    rodauth (2.46.0)
       roda (>= 2.6.0)
       sequel (>= 4)
     rodauth-model (0.5.0)
       rodauth (~> 2.28)
-    rodauth-rails (2.2.1)
+    rodauth-rails (2.2.2)
       railties (>= 5.2)
       roda (~> 3.76)
       rodauth (~> 2.36)
@@ -497,7 +497,7 @@ CHECKSUMS
   public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
   puma (8.0.2) sha256=c8ed871dfbbe66448ea9ffd46692342d9804d4071522b52b5331b7b6e7b686fb
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
-  rack (3.2.6) sha256=5ed78e1f73b2e25679bec7d45ee2d4483cc4146eb1be0264fc4d94cb5ef212c2
+  rack (3.2.7) sha256=93e13e1c24f93556671d85d2d79fa228c3485815c50d7e2f265b5330c6528fb7
   rack-mini-profiler (4.0.1) sha256=485810c23211f908196c896ea10cad72ed68780ee2998bec1f1dfd7558263d78
   rack-session (2.1.2) sha256=595434f8c0c3473ae7d7ac56ecda6cc6dfd9d37c0b2b5255330aa1576967ffe8
   rack-test (2.2.0) sha256=005a36692c306ac0b4a9350355ee080fd09ddef1148a5f8b2ac636c720f5c463
@@ -513,10 +513,10 @@ CHECKSUMS
   regexp_parser (2.12.0) sha256=35a916a1d63190ab5c9009457136ae5f3c0c7512d60291d0d1378ba18ce08ebb
   reline (0.7.0) sha256=5b012d8e55dbf9d450f12bde2cf7d15ff546ae80b3f8f3b30e570d431815583d
   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
-  roda (3.106.0) sha256=1a1cfb13c6690db158a3929e9c9ece88e697fb23b05baae63f07b0773e3bbade
-  rodauth (2.45.0) sha256=0f202a761b08059a926ec77ef15670c7af36051f64e55b1bd66ff641b83cddf8
+  roda (3.107.0) sha256=bf40c7a0f1fcd037ec10589a1dc98fc52ced1aece803670194ec7af0f0c77c06
+  rodauth (2.46.0) sha256=f70992b6d9dabb8332970b9eb8e1062f8be33fef7997a5b8738d0bacca5f275a
   rodauth-model (0.5.0) sha256=005cd65498c9895ff3c10a44957448ae56d13aea166b5f2b3244062c21094c02
-  rodauth-rails (2.2.1) sha256=e019f9542a8e7109841e2e6d131efe81a52278022b28984bef91a3cbe5ef3441
+  rodauth-rails (2.2.2) sha256=73f66ea3fabebfdbcb99e2e373d6919a3f9d9902661ff4f900e1a7d10a3160e6
   rubocop (1.89.0) sha256=4dee8e3ee9c45e474834efd9e8d6fd031e8331c8dacdff0de4ad65ae0a6faae7
   rubocop-ast (1.50.0) sha256=b9ca88300da0803ee222ad20cdb30494c0a784eed06fdc35d254b06d662788db
   rubocop-performance (1.26.1) sha256=cd19b936ff196df85829d264b522fd4f98b6c89ad271fa52744a8c11b8f71834
