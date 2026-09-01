@@ -68,7 +68,7 @@ group :development, :test do
   gem "lol_dba", require: false
 
   # Bullet to find n+1 queries [https://rubygems.org/gems/bullet]
-  gem "bullet", "~> 8.1.3"
+  gem "bullet", "~> 8.2.0"
 end
 
 group :development do
