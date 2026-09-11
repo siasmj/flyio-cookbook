@@ -141,7 +141,7 @@ GEM
       prism (>= 1.3.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    json (2.21.2)
+    json (3.0.2)
     language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -207,9 +207,9 @@ GEM
     pg (1.6.3-x86_64-darwin)
     pg (1.6.3-x86_64-linux)
     pg (1.6.3-x86_64-linux-musl)
-    pg_search (2.3.8)
-      activerecord (>= 7.2)
-      activesupport (>= 7.2)
+    pg_search (2.4.0)
+      activerecord (>= 8.0)
+      activesupport (>= 8.0)
     pp (0.6.4)
       prettyprint
     prettyprint (0.2.0)
@@ -389,7 +389,7 @@ DEPENDENCIES
   lol_dba
   pagy (~> 43.6)
   pg (~> 1.6)
-  pg_search (~> 2.3)
+  pg_search (~> 2.4)
   propshaft
   puma (>= 5.0)
   rack-mini-profiler
@@ -453,7 +453,7 @@ CHECKSUMS
   importmap-rails (2.2.3) sha256=7101be2a4dc97cf1558fb8f573a718404c5f6bcfe94f304bf1f39e444feeb16a
   io-console (0.9.2) sha256=efa74f891dd03c0939a931dfc6e74c2813d904763d456ea9762b0525e748db08
   irb (1.18.0) sha256=de9454a0703a54704b9811a5ef31a60c86949fbf4013fcf244fabc7c775248e3
-  json (2.21.2) sha256=1f1d3b7cf2b3ba1a69beca0bb6db13d5438b80bff3cd54cdaaa620b9b07c1c6a
+  json (3.0.2) sha256=8e6d7e7b11384c21230430cef90b71f14849a34a1f4452796670f7c981bd19df
   language_server-protocol (3.17.0.6) sha256=5ef2c0c138f8267e1bc631d3328347d354f96724b0af22f2c79516120443b7f0
   lint_roller (1.1.0) sha256=2c0c845b632a7d172cb849cc90c1bce937a28c5c8ccccb50dfd46a485003cc87
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
@@ -489,7 +489,7 @@ CHECKSUMS
   pg (1.6.3-x86_64-darwin) sha256=ee2e04a17c0627225054ffeb43e31a95be9d7e93abda2737ea3ce4a62f2729d6
   pg (1.6.3-x86_64-linux) sha256=5d9e188c8f7a0295d162b7b88a768d8452a899977d44f3274d1946d67920ae8d
   pg (1.6.3-x86_64-linux-musl) sha256=9c9c90d98c72f78eb04c0f55e9618fe55d1512128e411035fe229ff427864009
-  pg_search (2.3.8) sha256=10e2d365d76ac432c79875c3ce17cf285c97c029548d84990b02406e52347c06
+  pg_search (2.4.0) sha256=8b0b518aad9d0dcb507f7de35c0145d495c0dbe3c6e0babeeb3b226b5981ccaf
   pp (0.6.4) sha256=dfcb0fce700c41456265922884f9fe195d7fbb0674a3578e6c0f69588e82b570
   prettyprint (0.2.0) sha256=2bc9e15581a94742064a3cc8b0fb9d45aae3d03a1baa6ef80922627a0766f193
   prism (1.9.0) sha256=7b530c6a9f92c24300014919c9dcbc055bf4cdf51ec30aed099b06cd6674ef85
