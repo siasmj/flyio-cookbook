@@ -49,7 +49,7 @@ gem "faker", "~> 3.8", require: false
 gem "honeybadger", "~> 6.9"
 
 # Pin until Rails is cmopatible with v3
-gem "json", "~> 2.21.2"
+gem "json", "~> 3.0.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
