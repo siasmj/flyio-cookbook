@@ -127,7 +127,7 @@ GEM
     herb (0.11.0-x86_64-darwin)
     herb (0.11.0-x86_64-linux-gnu)
     herb (0.11.0-x86_64-linux-musl)
-    honeybadger (6.9.2)
+    honeybadger (6.9.3)
       logger
       ostruct
     i18n (1.15.2)
@@ -450,7 +450,7 @@ CHECKSUMS
   herb (0.11.0-x86_64-darwin) sha256=2eb9db026a1949cb2ad8cfa1944ef8402feab784c7d37a35c48575a9e0d79912
   herb (0.11.0-x86_64-linux-gnu) sha256=aba19094bc1618e1bc0fb59db52ba251c93a24598f5228815616b282f10bb8a0
   herb (0.11.0-x86_64-linux-musl) sha256=e27a08fe72304c8043e851b568ed30eaa45f06b5333d151939a7834e936c01aa
-  honeybadger (6.9.2) sha256=6f5a9c20f7a6448623c8fdc397fc3c96623b3d8fc85449810d42a0be4f8ae214
+  honeybadger (6.9.3) sha256=2a58808bb80f2c3bebaf084f215a4dcf803dda4236762719e2ae74cf9528253f
   i18n (1.15.2) sha256=00f9eb62412fe593b2a65a97daa75300d37abb8f7202ec748e94b6d46a9dd1b5
   importmap-rails (2.2.3) sha256=7101be2a4dc97cf1558fb8f573a718404c5f6bcfe94f304bf1f39e444feeb16a
   io-console (0.9.4) sha256=a403304f32928ee85e56d457b4612ca43f2703b561a3258844992bd24085fbb1
